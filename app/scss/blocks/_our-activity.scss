@@ -1,0 +1,202 @@
+.our-activity-container {
+	.section-title {
+		margin-bottom: 3rem;
+		@media #{md} {
+			margin-bottom: 2rem;
+		}
+		@media #{$xl} {
+			margin-bottom: 3rem;
+		}
+	}
+	.our-activity-sections-content-row {
+		.our-activity-sections-col {
+			@media #{$md} {
+				margin-top: 1rem;
+			}
+			.our-activity-section-container {
+				padding: 0;
+				border: 1px solid $navy;
+				@include transition03;
+				position: relative;
+				&:hover {
+					cursor: pointer;
+				}
+				h5 {
+					text-transform: uppercase;
+					color: $navy;
+					font-size: 1rem;
+					line-height: 1.6rem;
+					display: inline-block;
+					margin-block-start: .7rem;
+					margin-block-end: .7rem;
+					margin-top: .7rem;
+					margin-bottom: .7rem;
+					max-width: 85%;
+					margin-left: 1rem;
+					margin-right: .5rem;
+					&.plus {
+						&:after {
+							background: url("../img/plus.svg") no-repeat center center;
+							background-size: contain;
+							height: 15px;
+							width: 15px;
+							content: '';
+							@include filter_navy;
+							position: absolute;
+							top: 15px;
+							right: 10px;
+							@media #{$md} {
+								display: none;
+							}
+						}
+					}
+					@media #{$xs} {
+						font-size: 1.15rem;
+						line-height: 1.8rem;
+					}
+					@media #{$md} {
+						max-width: 100%;
+					}
+					@media #{$xxl} {
+						font-size: 1.4rem;
+						line-height: 2.1rem;
+						margin-left: 1.4rem;
+						margin-right: 1rem;
+					}
+				}
+				.our-activity-section-years {
+					display: none;
+					background-color: $lightgray; 
+					position: relative;
+					p {
+						margin-block-end: 0;
+						margin-block-start: 0;
+						margin: 0;
+						padding: .6rem 1rem ;
+						&.our-activity-section-2-year.active, 
+						&.our-activity-section-4-year.active {
+							color: $navy;
+							font-weight: 700;
+						} 
+					}
+				}
+				&.active {
+					background-color: $navy;
+					h5 {
+						color: $white;
+						&:after {
+							background: url("../img/minus.svg") no-repeat center center;
+							background-size: contain;
+							height: 15px;
+							width: 15px;
+							@include filter_white;
+						}
+					}
+				}
+			}
+		}
+		.our-activity-content-col {
+			margin-top: 1.4rem;
+			@media #{$md} {
+				margin-top: 0;
+			}
+			.our-activity-content-container {
+				display: none;
+				@media #{$md} {
+					margin-top: 1rem;
+				}
+				&.active {
+					display: block;
+				}
+				.our-activity-section-2-year-content,
+				.our-activity-section-4-year-content {
+					display: none;
+					&.active {
+						display: block;
+					}
+				}
+			}
+			.our-activity-content-wrap {
+				.our-activity-content-single {
+					p {
+						margin-top: 0;
+						a.our-activity-link {
+							text-transform: uppercase;
+							color: $aquamarine;
+							text-decoration: none;
+							position: relative;
+							
+							&:after {
+								@include arrow_right_animated;
+								@include filter_aqua;
+								margin-left: 10px;
+								@media #{$xxl} {
+									right: 0;
+									@include transition05;
+									top: 3px;
+								}
+								@media #{$xxxl} {
+									top: 7px;
+								}
+							}
+							&:hover {
+								cursor: pointer;
+								@media #{$xxl} {
+									&:after {
+										@include transition05;
+										opacity: 1;
+										right: -40px;
+									}
+								}
+							}
+						}
+					}
+				}
+				&[data-articels_no] {
+					display: none;
+				}
+			}
+
+			.our-activity-load-more {
+				text-transform: uppercase;
+				color: $aquamarine;
+				position: relative;
+				display: inline-block;
+				&:after {
+					@include filter_aqua;
+					@include transition05;
+				}
+				&:hover {
+					cursor: pointer;
+					color: $navy;
+					@include transition05;
+					&:after {
+						@include filter_navy;
+						@include transition05;
+					}
+					@media #{$xl} {
+						&:after {
+							@include transition05;
+							@include filter_navy;
+							opacity: 1;
+						}
+					}
+				}
+				&.disable {
+					display: none;
+				}
+			}
+			.our-activity-load-more-content {
+				display: none;
+				.our-activity-content-single {
+					&:first-of-type {
+						p {
+							margin-block-start: 0rem;
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

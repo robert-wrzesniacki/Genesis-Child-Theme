@@ -1,0 +1,20 @@
+.error404 {
+	.entry-content {
+		min-height: 55vh;
+		text-align: center;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		position: relative;
+		.page-404-text {
+			text-align: center;
+			padding: 1.6rem 1rem;
+			@media #{$sm} {
+				font-size: 1.8rem;
+				line-height: 2.6rem;;
+			}
+			a {
+				font-weight: 700;
+			}
+		}
+	}
+}

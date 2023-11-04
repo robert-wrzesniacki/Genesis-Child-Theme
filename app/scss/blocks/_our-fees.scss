@@ -1,0 +1,81 @@
+.our-fees-container {
+	.our-fees-text {
+		font-size: 1.15rem;
+		a {
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			font-size: 1.2rem;
+			position: relative;
+			display: inline-block;
+			&:after {
+				@include arrow_right_animated;
+				@include filter_aqua;
+				margin-left: 5px;
+				@media #{$md} {
+					position: absolute;
+					right: -36px;
+					top: 3px;
+				}
+				@media #{$lg} {
+					top: 1px;
+				}
+				@media #{$xl} {
+					right: 0px;
+					@include transition05;
+				}
+				@media #{$xxl} {
+					top: 4px;
+				}
+			}
+			@media #{$lg} {
+				font-size: 1rem;
+			}
+			@media #{$xl} {
+				font-size: 1.1rem;
+				&:hover {
+					color: $navy;
+					@include transition05;
+					&:after {
+						opacity: 1;
+						right: -36px;
+						@include transition05;
+						@include filter_navy;
+					}
+				}
+			}
+			@media #{$xxl} {
+				font-size: 1.25rem;
+			}
+		}
+	}
+	.our-fees-img {
+		text-align: center;
+		margin-top: 3rem;
+		@media #{$md} {
+			margin-top: 3rem;
+		}
+		.our-fees-img-inner {
+			position: relative;
+			margin: auto;
+			@media #{$sm} {
+				max-width: 495px;
+			}
+			@media #{$xl} {
+				max-width: 660px;
+			}
+			.img-frame {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: -10px;
+				right: -10px;
+				border: 2px solid $navy;
+				@media #{$sm} {
+					top: -20px;
+					right: -20px;
+				}
+			}
+		}
+	}
+}

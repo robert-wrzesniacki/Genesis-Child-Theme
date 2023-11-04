@@ -1,0 +1,119 @@
+.rankings-container {
+	.section-title {
+		margin-bottom: 3rem;
+		@media #{$xl} {
+			margin-bottom: 4rem;
+		}
+	}
+	.rankings-col {
+		margin-bottom: 1.4rem;
+		.rankings-col-inner {
+			border: 2px solid $navy;
+			padding: 1rem;
+			@media #{$lg} {
+				height: 100%;
+			}
+			.rankings-image {
+				max-width: 320px;
+				@media #{$xs} {
+					display: inline-block;
+					width: 27%;
+					vertical-align: top;
+					margin-right: 2%;
+				}
+				img {
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+			.rankings-text {
+				height: 100%;
+				@media #{$xs} {
+					display: inline-block;
+					width: 69%;
+					vertical-align: top;
+				}
+				p {
+					margin-bottom: 3rem;
+				}
+				h4 {
+					font-size: 1.1rem;
+					line-height: 1.8rem;
+					@media #{$xs} {
+						margin-block-start: 1rem;
+						margin-top: 1rem;
+					}
+					@media #{$sm} {
+						font-size: 1.3rem;
+						line-height: 1.9rem;
+					}
+					@media #{$xxl} {
+						font-size: 1.5rem;
+						line-height: 2.1rem;
+					}
+				}
+				a {
+					color: $darkgray;
+					&:after {
+						@include filter_gray;
+					}
+					@media #{$md} {
+						position: absolute;
+						bottom: 1.2rem;
+					}
+					@media #{$xxl} {
+						bottom: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+	.rankings-modal-container {
+		display: none;
+		&.show {
+			display: block;
+			position: fixed;
+			z-index: 9999;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: auto;
+			background-color: rgba($white, .4);
+			text-align: center;
+		}
+		.rankings-img-modal {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.rankings-close-img-modal {
+			background-color: $darkgray;
+			border-radius: 5px;
+			right: -30px;
+			top: -30px;
+			height: 25px;
+			width: 25px;
+			position: absolute;
+			&:before {
+				background: url("../img/plus.svg") no-repeat center center;
+				background-size: contain;
+				height: 15px;
+				width: 15px;
+				content: '';
+				transform: rotate(45deg);
+				@include filter_white;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

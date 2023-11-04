@@ -1,0 +1,41 @@
+/*
+Theme Name: Genesis Child Theme
+Description: Motyw projektu Genesis Child Theme
+Author: Robert Wrześniacki
+Author URI: https://raw-code.it
+
+Version: 0.1.0
+Template: genesis
+
+Text Domain: genesis-child-theme
+Domain Path: /languages
+Requires at least: 5.4
+Requires PHP: 7.1
+*/
+
+.swiper-news-container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+}
+.pronounced-video{
+    margin-top: 20px;
+}
+.pronounced-description{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+   
+}
+.pronounced-description > p{
+    line-height: 2.5rem !important;
+}
+@media only screen and (max-width: 991px){
+    .pronounced-video > div{
+        margin: auto;
+    }
+    .pronounced-description > p{
+        line-height: 1.75rem !important;
+    }
+}

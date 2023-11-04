@@ -1,0 +1,235 @@
+.about-us-container {
+	.section-title {
+		margin-bottom: 3rem;
+		@media #{$xl} {
+			margin-bottom: 4rem;
+		}
+	}
+	.mh-100 {
+		min-height: 100%;
+	}
+	.special-padding-right {
+		@media #{$lg} {
+			padding-right: .5rem;
+		}
+	}
+	.special-padding-left {
+		@media #{$lg} {
+			padding-left: .5rem;
+		}
+	}
+	.about-us-col {
+		padding-right: 0;
+		padding-left: 0;
+		margin-bottom: 1rem;
+		position: relative;
+		.about-us-card {
+			height: 100%;
+			padding: 1.2rem;
+			-webkit-perspective: 0;
+			-webkit-backface-visibility: hidden;
+			-webkit-transform: translate3d(0,0,0);
+			visibility:visible;
+			backface-visibility: hidden;
+			@include linear-transition05;
+			box-sizing: border-box;
+			@media #{$xl} {
+				padding: 1.6rem 1.2rem;
+			}
+			@media #{$xxl} {
+				padding: 2rem 1.4rem;
+			}
+			p:first-of-type {
+				margin-block-start: 0rem;
+				margin-top: 0rem;
+			}
+			a {
+				text-decoration: none;
+				position: relative;
+			}
+			&.experience {
+				background-color: $navy;
+				color: $white;
+				@media #{$sm} {
+					margin-right: 8px;
+					margin-bottom: 1.4rem;
+				}
+				.uppercase-with-arrow {
+					@media #{$sm} {
+						position: absolute;
+						bottom: 5px;
+					}
+				}
+			}
+			&.recognition {
+				&.face {
+					p {
+						position: absolute;
+						bottom: 5px;
+						color: $white;
+					}
+				}
+				&.back {
+					p {
+						color: $darkgray;
+						&:after {
+							@include filter_gray;
+						}
+					}
+				}
+				min-height: 200px;
+				@media #{$sm} {
+					margin-left: 8px;
+				}
+				@media #{$lg} {
+					min-height: 300px;
+				}
+			}
+			&.international {
+				min-height: 200px;
+				background-position: top center;
+				@media #{$xl} {
+					min-height: 230px;
+				}
+				&.face {
+					p {
+						color: $darkgray;
+						position: absolute;
+						bottom: 10px;
+						right: 20px;
+						text-align: right;
+						&:after {
+							@include filter_gray;
+						}
+						@media #{$md} {
+							right: 46px;
+						}
+					}
+				}
+				&.back {
+					.uppercase-with-arrow {
+						&:after {
+							@include filter_aqua;
+						}
+					}
+				}
+				p {
+					max-width: 230px;
+					@media #{$md} {
+						max-width: 300px;
+					}
+				}
+			}
+			&.global-reach {
+				min-height: 200px;
+				@media #{$xl} {
+					min-height: 230px;
+				}
+				.uppercase-with-arrow {
+					&:after {
+						@include filter_gray;
+					}
+				}
+			}
+			&.how-can-we-help {
+				background-color: $aquamarine;
+				color: $white;
+			}
+			&.contact {
+				background-color: $navy;
+				color: $white;
+				@media #{$sm} {
+					margin-right: 8px;
+				}
+			}
+			&.our-values {
+				min-height:200px;
+				background-position: center center;
+				@media #{$sm} {
+					margin-left: 8px;
+					@media #{$lg} {
+						min-height: 350px;
+					}
+					@media #{$xl} {
+						min-height: 440px;
+					}
+					@media #{$xxl} {
+						min-height: 570px;
+					}
+				}
+				p {
+					color: $darkgray;
+				}
+				.uppercase-with-arrow {
+					&:after {
+						@include filter_gray;
+					}
+				}
+			}
+			&.about-us-bg-img {
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			&.back {
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: rotateY(180deg);
+				height: 100%;
+				-webkit-perspective: 0;
+				-webkit-backface-visibility: hidden;
+				visibility:visible;
+				backface-visibility: hidden;
+				@include linear-transition05;
+				background-color: $white;
+				z-index: 999;
+				&.recognition {
+					@media #{$sm} {
+						left: 8px;
+						margin-bottom: 1.4rem;
+					}
+					border: 1px solid $gray;
+					.uppercase-with-arrow {
+						@media #{$sm} {
+							position: absolute;
+							bottom: 5px;
+						}
+					}
+				}
+				&.international {
+					border: 1px solid $gray;
+					color: $aquamarine;
+					p {
+						max-width: 100%;
+					}
+				}
+				&.global-reach {
+					border: 1px solid $gray;
+					p {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+		.about-us-tile {
+			position: relative;
+			height: 100%;
+			&:hover {
+				.about-us-card.face {
+					transform: rotateY(180deg);
+					-webkit-perspective: 0;
+					-webkit-backface-visibility: hidden;
+					visibility:visible;
+					backface-visibility: hidden;
+				}
+				.about-us-card.back {
+					transform: rotateY(0deg);
+					opacity: 1;
+					margin-left: 0;
+					box-sizing: border-box;
+					z-index: 999;
+				}
+			}
+		}
+	}
+}

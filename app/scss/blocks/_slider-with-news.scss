@@ -1,0 +1,223 @@
+.slider-with-news-container.container-fluid.section-container  {
+	width: 100%;
+	padding: 0;
+	@media #{$sm} {
+		width: 100%;
+	}
+	@media #{$xl} {
+		width: 92%;
+		max-width: 1550px;
+	}
+	.col-12.padding {
+		padding-right: 0;
+		padding-left: 0;
+		@media #{$xl} {
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+	}
+	.swiper-news-container {
+		height: 300px;
+		padding: 2rem;
+		box-sizing: border-box;
+		@media #{$xs} {
+			padding-top: 2.6rem;
+			height: 380px;
+		}
+		@media #{$sm} {
+			padding-top: 3rem;
+			height: 420px;
+		}
+		@media #{$md} {
+			height: 440px;
+		}
+		@media #{$lg} {
+			height: 480px;
+		}
+		@media #{$xxl} {
+			padding-top: 3.5rem;
+			padding-left: 4rem;
+			height: 570px;
+		}
+		@media #{$xxxl} {
+			padding-top: 4.5rem;
+			height: 650px;
+		}
+		.swiper-news-container-inner {
+			background-color: rgba( $white, .85 );
+			min-height: 220px;
+			padding: 1rem;
+			position: relative;
+			@media #{$xs} {
+				min-height: 300px;
+				padding: 2rem;
+			}
+			@media #{$sm} {
+				min-height: 320px;
+			}
+			@media #{$md} {
+				max-width: 70%;
+			}
+			@media #{$lg} {
+				max-width: 60%;
+				min-height: 380px;
+			}
+			@media #{$xl} {
+				max-width: 600px;
+			}
+			@media #{$xxl} {
+				max-width: 700px;
+				min-height: 430px;
+			}
+			@media #{$xxl} {
+				max-width: 950px;
+				min-height: 460px;
+			}
+			h4.genesis-child-theme-post-category {
+				margin-block-start: 0;
+				margin-block-end: 0;
+				margin: 0;
+				font-family: $rubikbold;
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 1.2rem;
+				background: -webkit-linear-gradient(0deg, $navy, $aquamarine 80%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				@media #{$xs} {
+					font-size: 1.5rem;
+				}
+				@media #{$sm} {
+					font-size: 2rem;
+				}
+				@media #{$lg} {
+					font-size: 2.2rem;
+					margin-bottom: 1rem;
+				}
+				@media #{$xl} {
+					font-size: 2.5rem;
+				}
+				@media #{$xxl} {
+					font-size: 2.7rem;
+				}
+			}
+			a.genesis-child-theme-post-title {
+				display: block;
+				color: $darkgray;
+				font-size: 1.15rem;
+				text-decoration: none;
+				margin-top: .7rem;
+				margin-bottom: .7rem;
+				font-size: 1rem;
+				line-height: 1.3rem;
+				font-weight: 700;
+				@media #{$xs} {
+					font-size: 1.25rem;
+					line-height: 1.55rem;
+				}
+				@media #{$lg} {
+					font-size: 1.35rem;
+					line-height: 1.65rem;
+					margin-bottom: 1rem;
+				}
+				@media #{$xxl} {
+					font-size: 1.4rem;
+					line-height: 1.75rem;
+				}
+			}
+			a.genesis-child-theme-post-excerpt {
+				display: block;
+				color: $darkgray;
+				font-size: 1rem;
+				text-decoration: none;
+				font-size: 1rem;
+				line-height: 1.3rem;
+				@media #{$xs} {
+					font-size: 1.15rem;
+					line-height: 1.45rem;
+				}
+				@media #{$sm} {
+					max-width: 380px;
+				}
+				@media #{$lg} {
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+				}
+				@media #{$xxl} {
+					font-size: 1.25rem;
+					line-height: 1.65rem;
+				}
+			}
+			.swiper-navigation-container {
+				text-align: right;
+				position: absolute;
+				bottom: 10px;
+				left: 16px;
+				@media #{$xs} {
+					bottom: 20px;
+					left: 32px;
+				}
+				@media #{$sm} {
+					bottom: 30px;
+				}
+				.swiper-slider-with-news-button-next,
+				.swiper-slider-with-news-button-prev {
+					@include arrow_right;
+					@include filter_gray;
+					@include transition03;
+					&:focus,
+					&:hover {
+						@include filter_aqua;
+						@include transition03;
+						outline: none;
+						cursor: pointer;
+					}
+				}
+				.swiper-slider-with-news-button-prev {
+					@include arrow_left;
+				}
+				.swiper-slider-with-news-pagination {
+					display: inline-block;
+					width: 60px;
+					text-align: center;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+	.swiper-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background-color: grey;
+		.swiper-bar-inner {
+			width: 1%;
+			height: 10px;
+			background-image: -moz-linear-gradient( 0deg, $navy 0%, $aquamarine 93%);
+			background-image: -webkit-linear-gradient( 0deg, $navy 0%, $aquamarine 93%);
+			background-image: -ms-linear-gradient( 0deg, $navy 0%, $aquamarine 93%);
+			@media #{$md} {
+				height: 12px;
+			}
+			&.no-bar {
+				width: 0%;
+			}
+			&.animated {
+				width: 100%;
+				transition: all 4s linear;
+			}
+		}
+	}
+	
+	.swiper-slide.swiper-slide-active {
+		.swiper-bar {
+			.swiper-bar-inner {
+				transition-delay: 1s;
+				transition: linear 6s;
+				width: 100%;
+			}
+	  	}
+	}
+}

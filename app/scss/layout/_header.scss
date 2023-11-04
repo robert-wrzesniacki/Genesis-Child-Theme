@@ -1,0 +1,223 @@
+.header-container {
+	margin-bottom: 2rem;
+	@media #{$lg} {
+		margin-bottom: 3rem;
+	}
+	.top-header-row {
+		margin-bottom: 1.4rem;
+		@media #{$lg} {
+			margin-bottom: 2rem;
+		}
+		.menu-cities-container {
+			border-bottom: 2px solid $navy;
+			@media #{$lg} {
+				border-bottom: 1px solid $navy;
+			}
+			.menu-cities {
+				padding-inline-start: 0px;
+				list-style-type: none;
+				li {
+					display: inline-block;
+					padding-right: .6rem;
+					padding-left: .4rem;
+					border-right: 2px solid $aquamarine;
+					&:first-child {
+						padding-left: 0;
+					}
+					&:last-child {
+						border-right: none;
+					}
+					@media #{$xs} {
+						padding-right: 1.2rem;
+						padding-left: 1rem;
+					}
+					a {
+						font-size: .82rem;
+						color: $darkgray;
+						text-decoration: none;
+						&:hover {
+							cursor: text;
+						}
+						@media #{$xs} {
+							font-size: .95rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.logo-nav-row {
+		.logo-col {
+			margin-top: 10px;
+			img {
+				max-width: 200px;
+				@media #{$xl} {
+					max-width: 100%;
+				}
+			}
+		}
+		.nav-col {
+			position: relative;
+			.menu-bar {
+				width: 30px;
+				height: 34px;
+				cursor: pointer;
+				margin-top: 15px;
+				margin-left: auto;
+				@media #{$xs} {
+					width: 39px;
+				}
+				@media #{$lg} {
+					display: none;
+				}
+				.bar {
+					height: 3px;
+					width: 100%;
+					background-color: $darkgray;
+					display: block;
+				}
+				#bar1 {
+					transform: translateY(-7px);
+					@include transition05;
+				}
+				#bar3 {
+					transform: translateY(7px);
+					@include transition05;
+				}
+				&.menu-open {
+					#bar1 {
+						transform: translateY(3px) rotateZ(-45deg);
+						@include transition05;
+					}
+					#bar2 {
+						opacity: 0;
+					}
+					#bar3 {
+						transform: translateY(-3px) rotateZ(45deg);
+						@include transition05;
+					}
+				}
+			}
+			.header-main-nav {
+				background-color: $white;
+				position: fixed;
+				right: -270px;
+				width: 270px;
+				@include transition05;
+				padding: 16px;
+				z-index: 999;
+				border: 1px solid $gray;
+				@media #{$sm} {
+					right: -300px;
+					width: 300px;
+				}
+				@media #{$lg} {
+					position: static;
+					min-height: 20px;
+					text-align: right;
+					width: 100%;
+					padding: 0;
+					border: none;
+				}
+				ul {
+					padding-inline-start: 0px;
+				}
+				li {
+					padding-bottom: 10px;
+					text-align: left;
+					list-style-type: none;
+					@media #{$lg} {
+						display: inline-block;
+						padding-left: 16px;;
+						text-align: left;
+						position: relative;
+					}
+					@media #{$xxl} {
+						padding-left: 36px;
+					}
+					@media #{$xxxl} {
+						padding-left: 52px;
+					}
+					a {
+						text-transform: uppercase;
+						font-size: 1.2rem;
+						color: $darkgray;
+						text-decoration: none;
+						&:hover {
+							color: $navy;
+						}
+						@media #{$lg} {
+							font-size: 1rem;
+						}
+						@media #{$xl} {
+							font-size: 1.1rem;
+							line-height: 30px;
+						}
+						@media #{$xxl} {
+							font-size: 1.25rem;
+							line-height: 40px;
+						}
+						@media #{$xxxl} {
+							line-height: 50px;
+						}
+					}
+					&.current-menu-item,
+					&.current-menu-ancestor {
+						>a {
+							color: $navy;
+						}
+					}
+					.sub-menu {
+						display: none;
+						margin-top: 10px;
+						padding-inline-start: 20px;
+						@media #{$lg} {
+							background-color: $white;
+							border: 1px solid $gray;
+							padding-top: 12px;
+							padding-inline-start: 0px;
+						}
+						li {
+							@media #{$lg} {
+								display: block;
+								position: static;
+								padding: 0;
+								padding-bottom: 10px;
+								text-align: left;
+								margin-left: 20%;
+							}
+							@media #{$xl} {
+								padding-bottom: 0px;
+							}
+						}
+						&.show {
+							display: block;
+							@media #{$lg} {
+								position: absolute;
+								z-index: 999;
+								width: 140%;
+								left: -15%;
+							}
+							@media #{$xxxl} {
+								left: -10%;
+							}
+							@media #{$xxl} {
+								left: -5%;
+							}
+						}
+					}
+				}
+			}
+			.header-main-nav.menu-open {
+				right: 30px;
+				@include transition05;
+				z-index: 999;
+			}
+		}
+	}
+}
+.home {
+	.header-container {
+		margin-bottom: 1rem;
+	}
+}

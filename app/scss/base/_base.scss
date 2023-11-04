@@ -1,0 +1,94 @@
+html {
+	font-size: 1rem;
+	box-sizing: border-box;
+	font-family: $rubik;
+	color: $darkgray;
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+.header-container,
+.footer-container,
+.container-fluid.section-container {
+	margin: auto;
+	@media #{$sm} {
+		width: 96%;
+	}
+	@media #{$lg} {
+		width: 100%;
+	}
+	@media #{$xl} {
+		width: 92%;
+		max-width: 1550px;
+	}
+}
+.container-fluid.section-container {
+	margin-bottom: 2rem;
+	@media #{$md} {
+		margin-bottom: 3rem;
+	}
+}
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+a {
+	@include transition05;
+	&:hover {
+		@include transition05;
+	}
+}
+.entry-title {
+	display: none;
+}
+.show-on-md-up {
+	display: none;
+	@media #{$md} {
+		display: block;
+	}
+}
+.show-on-md-down {
+	@media #{$md} {
+		display: none;
+	}
+}
+.show-on-lg-up {
+	display: none;
+	@media #{$lg} {
+		display: block;
+	}
+}
+.show-on-lg-down {
+	@media #{$lg} {
+		display: none;
+	}
+}
+.show-on-xl-up-flex {
+	display: none;
+	@media #{$xl} {
+		display: flex;
+	}
+}
+.show-on-xl-up {
+	display: none;
+	@media #{$xl} {
+		display: block;
+	}
+}
+.show-on-xl-down {
+	@media #{$xl} {
+		display: none;
+	}
+}

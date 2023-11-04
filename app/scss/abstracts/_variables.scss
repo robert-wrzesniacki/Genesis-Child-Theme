@@ -1,0 +1,57 @@
+// ------------------------------------------------------
+// Variables - configuration
+// 
+//COLORS
+$navy: #00008F;
+$aquamarine: #09ACAF;
+$lightgray: #ebebeb;
+$gray: #bcbec0;
+$darkgray: #262626;
+$white: #ffffff;
+$black: #000000;
+
+//BREAKPOINTS
+$xs: "only screen and (min-width: 480px)";
+$sm: "only screen and (min-width: 576px)";
+$md: "only screen and (min-width: 768px)";
+$lg: "only screen and (min-width: 992px)";
+$xl: "only screen and (min-width: 1200px)";
+$xxl: "only screen and (min-width: 1440px)";
+$xxxl: "only screen and (min-width: 1600px)";
+
+//FONTS
+@font-face {
+    font-family: 'Rubik';
+    src: url('../../fonts/Rubik-Regular.eot');
+    src: url('../../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Rubik-Regular.woff2') format('woff2'),
+         url('../../fonts/Rubik-Regular.woff') format('woff'),
+         url('../../fonts/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+$rubik: 'Rubik', sans-serif;
+
+@font-face {
+    font-family: 'Rubik-Light';
+    src: url('../../fonts/Rubik-Light.eot');
+    src: url('../../fonts/Rubik-Light.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Rubik-Light.woff2') format('woff2'),
+         url('../../fonts/Rubik-Light.woff') format('woff'),
+         url('../../fonts/Rubik-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+$rubiklight: 'Rubik-Light', sans-serif;
+
+@font-face {
+    font-family: 'Rubik-Bold';
+    src: url('../../fonts/Rubik-Bold.eot');
+    src: url('../../fonts/Rubik-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Rubik-Bold.woff2') format('woff2'),
+         url('../../fonts/Rubik-Bold.woff') format('woff'),
+         url('../../fonts/Rubik-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+$rubikbold: 'Rubik-Bold', sans-serif;

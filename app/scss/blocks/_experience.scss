@@ -1,0 +1,392 @@
+.experience-container {
+	.section-title {
+		margin-bottom: 3rem;
+		@media #{md} {
+			margin-bottom: 2rem;
+		}
+		@media #{$xl} {
+			margin-bottom: 3rem;
+		}
+	}
+	.experience-sections-content-row {
+		.experience-sections-col {
+			@media #{$md} {
+				margin-top: 1rem;
+			}
+			.experience-section-container {
+				padding: 0;
+				border: 1px solid $navy;
+				@include transition03;
+				position: relative;
+				&:hover {
+					cursor: pointer;
+				}
+				h5 {
+					text-transform: uppercase;
+					color: $navy;
+					font-size: 1rem;
+					line-height: 1.6rem;
+					display: block;
+					margin-block-start: .7rem;
+					margin-block-end: .7rem;
+					margin-top: .7rem;
+					margin-bottom: .7rem;
+					max-width: 95%;
+					margin-left: 1rem;
+					margin-right: .5rem;
+					&.plus {
+						&:after {
+							background: url("../img/plus.svg") no-repeat center center;
+							background-size: contain;
+							height: 15px;
+							width: 15px;
+							content: '';
+							@include filter_navy;
+							position: absolute;
+							top: 15px;
+							right: 10px;
+							@media #{$xs} {
+								top: 20px;
+							}
+						}
+					}
+					@media #{$xs} {
+						font-size: 1.15rem;
+						line-height: 1.8rem;
+					}
+					@media #{$xxl} {
+						font-size: 1.4rem;
+						line-height: 2.1rem;
+						margin-left: 1.4rem;
+						margin-right: 1rem;
+					}
+				}
+				&.active {
+					background-color: $navy;
+					h5 {
+						color: $white;
+						&:after {
+							background: url("../img/minus.svg") no-repeat center center;
+							background-size: contain;
+							height: 15px;
+							width: 15px;
+							@include filter_white;
+						}
+					}
+				}
+				.wrapper-experience {
+					display: none;
+					position: relative;
+					left: 50%;
+					transform: translate(-50%,0%);
+					background-color: $lightgray;
+					z-index: 99;
+					height: 120px;
+					padding-top: 10px;
+					&.wrapper-experience-section-2 {
+						@media #{$md} {
+							height: 160px;
+						}
+						@media #{$xxl} {
+							height: 180px;
+						}
+					}
+					&.wrapper-experience-section-3 {
+						@media #{$xxl} {
+							height: 160px;
+						}
+					}
+					.select-wrap {
+						width: 90%;
+						margin: 0px auto;
+						position: static;
+						user-select: none;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						.default-option {
+							background: #fff;
+							position: relative;
+							cursor: pointer;
+							border: 1px solid $gray;
+							li {
+								padding: 10px 20px;
+							}
+						}
+						.select-ul {
+							position: static;
+							width: 100%;
+							background: #fff;
+							border: 1px solid $gray;
+							border-top: 1px solid $white;
+							display: none;
+							height: 300px;
+							overflow-y: scroll;
+							&::-webkit-scrollbar {
+								width: 10px;
+							}
+							&::-webkit-scrollbar-track {
+								background: $lightgray;
+							}
+							&::-webkit-scrollbar-thumb {
+								background: $navy;
+							}
+							&::-webkit-scrollbar-thumb:hover {
+								background: $navy;
+							}
+							li {
+								padding: 10px 20px;
+								cursor: pointer;
+								&:hover{
+									color: $navy;
+								}
+							}
+						}
+						.option {
+							display: flex;
+							align-items: center;
+						}
+						&.active {
+							.select-ul {
+								display: block;
+							}
+						}
+					}
+					* {
+						margin: 0;
+						padding: 0;
+						box-sizing: border-box;
+						list-style: none;
+					}
+				}
+			}
+		}
+		.experience-content-col {
+			margin-top: 1.4rem;
+			@media #{$md} {
+				margin-top: 0;
+			}
+			.experience-content-container {
+				display: none;
+				&.active {
+					display: block;
+				}
+				.geography-map-container {
+					position: relative;
+					padding-bottom: 2rem;
+					.map-europe-img,
+					.map-north-america-img,
+					.map-south-america-img,
+					.map-asia-img,
+					.map-africa-img,
+					.map-australia-img {
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 0;
+						@include transition03;
+					}
+					.map-europe {
+						position: absolute;
+						height: 23%;
+						width: 20.5%;
+						left: 44%;
+						top: 7%;
+						z-index: 999;
+					}
+					.map-north-america {
+						position: absolute;
+						height: 49.5%;
+						width: 40.5%;
+						left: 1%;
+						top: 3%;
+						z-index: 999;
+					}
+					.map-south-america {
+						position: absolute;
+						height: 45.5%;
+						width: 13%;
+						left: 24.5%;
+						top: 53%;
+						z-index: 999;
+					}
+					.map-asia {
+						position: absolute;
+						height: 61.2%;
+						width: 34.5%;
+						left: 65%;
+						top: 4%;
+						z-index: 999;
+					}
+					.map-africa {
+						position: absolute;
+						height: 42%;
+						width: 15.7%;
+						left: 42.2%;
+						top: 42%;
+						z-index: 999;
+					}
+					.map-australia {
+						position: absolute;
+						height: 25.5%;
+						width: 18.5%;
+						left: 78.2%;
+						top: 68%;
+						z-index: 999;
+					}
+					.map-europe,
+					.map-north-america,
+					.map-south-america,
+					.map-asia,
+					.map-africa,
+					.map-australia {
+						&:hover {
+							cursor: pointer;
+						}		
+					}
+					.map-europe:hover~.map-europe-img,
+					.map-europe.active~.map-europe-img,
+					.map-north-america:hover~.map-north-america-img,
+					.map-north-america.active~.map-north-america-img,
+					.map-south-america:hover~.map-south-america-img,
+					.map-south-america.active~.map-south-america-img,
+					.map-asia:hover~.map-asia-img,
+					.map-asia.active~.map-asia-img,
+					.map-africa:hover~.map-africa-img,
+					.map-africa.active~.map-africa-img,
+					.map-australia:hover~.map-australia-img,
+					.map-australia.active~.map-australia-img {
+						opacity: 1;
+						@include transition03;
+						cursor: pointer;
+					}
+				}
+				.geography-content {
+					display: none;
+					border-top: 1px solid $darkgray;
+					padding-top: 1rem;
+					&.active {
+						display: block;
+					}
+					.experience-content-wrap {
+						.experience-content-single {
+							p.country {
+								@media #{$xs} {
+									display: inline-block;
+									width: 25%;
+									vertical-align: top;
+								}
+							}
+							p.description {
+								@media #{$xs} {
+									display: inline-block;
+									width: 73%;
+								}
+							}
+						}
+						&[data-articels_no] {
+							display: none;
+						}
+					}
+				}
+				.experience-section-2-type-content,
+				.experience-section-3-type-content {
+					display: none;
+					&.active {
+						display: block;
+					}
+				}
+				.experience-section-search-results {
+					padding-bottom: 1.6rem;
+					border-bottom: 1px solid $darkgray;
+					font-weight: 700;
+					span {
+						display: none;
+						&:first-of-type {
+							display: inline-block;
+						}
+					}
+				}
+			}
+			.experience-content-wrap {
+				.experience-content-single {
+					p {
+						margin-top: 0;
+						a.experience-link {
+							text-transform: uppercase;
+							color: $aquamarine;
+							text-decoration: none;
+							position: relative;
+							&:after {
+								@include arrow_right_animated;
+								@include filter_aqua;
+								margin-left: 5px;
+								@media #{$xxl} {
+									right: 0;
+									@include transition05;
+									top: 3px;
+								}
+								@media #{$xxxl} {
+									top: 7px;
+								}
+							}
+							&:hover {
+								cursor: pointer;
+								@media #{$xxl} {
+									&:after {
+										@include transition05;
+										opacity: 1;
+										right: -40px;
+									}
+								}
+							}
+						}
+					}
+				}
+				&[data-articels_no] {
+					display: none;
+				}
+			}
+			
+			.experience-load-more {
+				text-transform: uppercase;
+				color: $aquamarine;
+				position: relative;
+				display: inline-block;
+				&:after {
+					@include filter_aqua;
+					@include transition05;
+				}
+				&:hover {
+					cursor: pointer;
+					color: $navy;
+					@include transition05;
+					&:after {
+						@include filter_navy;
+						@include transition05;
+					}
+					@media #{$xl} {
+						&:after {
+							@include transition05;
+							@include filter_navy;
+							opacity: 1;
+						}
+					}
+				}
+				&.disable {
+					display: none;
+				}
+			}
+			.experience-load-more-content {
+				display: none;
+				.experience-content-single {
+					&:first-of-type {
+						p {
+							margin-block-start: 0rem;
+							margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,210 @@
+.contact-with-photos-container {
+	.section-title {
+		margin-bottom: 3rem;
+		@media #{$xl} {
+			margin-bottom: 4rem;
+		}
+	}
+	.contact-data-col {
+		margin-bottom: 1rem;
+		padding-right: 0;
+		h5 {
+			margin-block-start: 0rem;
+			margin-block-end: 1rem;
+			margin-top: 0;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+			font-weight: normal;
+			color: $aquamarine;
+		}
+		.contact-data-inner {
+			border: 1px solid $aquamarine;
+			position: relative;
+			width: 260px;
+			height: 360px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding: 1rem;
+			@media #{$sm} {
+				width: 100%;
+				height: 420px;
+			}
+			@media #{$md} {
+				height: 480px;
+				width: 100%;
+			}
+			h5 {
+				color: $aquamarine;
+				@media #{$xl} {
+					margin-block-end: .5rem;
+					margin-bottom: .5rem;
+				}
+			}
+			.contact-details {
+				p {
+					margin-block-start: 0;
+					margin-block-end: 0;
+					margin-top: 0;
+					margin-bottom: 0;
+					@media #{$xs} {
+						line-height: 1.5rem;
+					}
+					@media #{$lg} {
+						line-height: 1.6rem;
+					}
+					@media #{$xxl} {
+						line-height: 1.80rem;
+					}
+				}
+				a {
+					color: $darkgray;
+					@include transition03;
+					&:hover {
+						color: $navy;
+						@include transition03;
+					}
+				}
+			}
+		}
+	}
+	.contact-data-col-2 {
+		position: relative;
+		order: 5;
+		@media #{$lg} {
+			order: 0;
+		}
+		.contact-lets-be-in-touch {
+			border: 1px solid $navy;
+			height: 45%;
+			width: 260px;
+			padding: 1rem;
+			padding: 1rem;
+			@media #{$sm} {
+				width: 100%;
+			}
+			@media #{$md} {
+				width: 100%;
+			}
+			h5 {
+				color: $navy
+			}
+			.contact-mail {
+				color: $black;
+				text-decoration: none;
+				font-weight: 700;
+				display: block;
+				margin-bottom: 1.8rem;
+				font-size: 1rem;
+				line-height: 1.3rem;
+				@media #{$xs} {
+					font-size: 1.15rem;
+					line-height: 1.45rem;
+				}
+				@media #{$lg} {
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+				}
+				@media #{$xxl} {
+					font-size: 1.25rem;
+					line-height: 1.70rem;
+				}
+				&:hover {
+					color: $aquamarine
+				}
+			}
+			.contact-linkedin,
+			.contact-fb,
+			.contact-twitter {
+				@include contact_icon;
+				@include filter_gray;
+				@include transition03;
+				margin-right: .6rem;
+				display: inline-block;
+				background:  url("../img/linkedin.svg") no-repeat center center;
+				&:hover {
+					@include filter_navy;
+					@include transition03;
+				}
+				@media #{$lg} {
+					height: 25px;
+					width: 25px;
+					margin-right: 1rem;
+				}
+				@media #{$xxl} {
+					height: 30px;
+					width: 30px;
+					margin-right: 1.25rem;
+				}
+			}
+			.contact-linkedin {
+				background:  url("../img/linkedin.svg") no-repeat center center;
+			}
+			.contact-fb {
+				background:  url("../img/facebook-square.svg") no-repeat center center;
+			}
+			.contact-twitter {
+				background:  url("../img/twitter-square.svg") no-repeat center center;
+			}
+		}
+		.contact-whats-more {
+			width: 260px;
+			margin-top: 1rem;
+			@media #{$sm} {
+				height: 55%;
+				width: 100%;
+				padding: 1rem 0rem 0 1rem;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			@media #{$md} {
+				width: 100%;
+			}
+			.contact-whats-more-inner {
+				background-color: $lightgray;
+				height: 100%;
+				padding: 1rem;
+			}
+			h5 {
+				color: $aquamarine;
+			}
+			h6 {
+				color: $black;
+				font-weight: 700;
+				margin-bottom: 1.8rem;
+				margin-block-start: 0;
+				margin-top: 0;
+				font-size: 1rem;
+				line-height: 1.3rem;
+				@media #{$xs} {
+					font-size: 1.15rem;
+					line-height: 1.45rem;
+				}
+				@media #{$lg} {
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+				}
+				@media #{$xxl} {
+					font-size: 1.25rem;
+					line-height: 1.70rem;
+				}
+			}
+			.uppercase-with-arrow-link  {
+				color: $darkgray;
+				@include transition05;
+				&:after {
+					@include filter_gray;
+					@include transition05;
+				}
+				&:hover {
+					color: $aquamarine;
+					@include transition05;
+					&:after {
+						@include filter_aqua;
+						@include transition05;
+					}
+				}
+			}
+		}
+	}
+}
